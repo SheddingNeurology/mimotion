@@ -131,6 +131,18 @@ def getBeijinTime():
             a = set_push[6]
             min_1 = min_dict[time_list[6]]
             max_1 = max_dict[time_list[6]]
+        elif "nhrs=" + str(time_list[7]) in result:
+            a = set_push[7]
+            min_1 = min_dict[time_list[7]]
+            max_1 = max_dict[time_list[7]]
+        elif "nhrs=" + str(time_list[8]) in result:
+            a = set_push[8]
+            min_1 = min_dict[time_list[8]]
+            max_1 = max_dict[time_list[8]]
+        elif "nhrs=" + str(time_list[9]) in result:
+            a = set_push[9]
+            min_1 = min_dict[time_list[9]]
+            max_1 = max_dict[time_list[9]]
         else:
             a = False
             min_1 = 0
