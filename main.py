@@ -19,6 +19,7 @@ agentid = sys.argv[8]  # 填写你的应用ID，不加引号，是个整型常�
 touser = sys.argv[9]  # 指定接收消息的成员，成员ID列表（多个接收者用‘|’分隔，最多支持1000个）。特殊情况：指定为”@all”，则向该企业应用的全部成员发送
 toparty = sys.argv[10]  # 指定接收消息的部门，部门ID列表，多个接收者用‘|’分隔，最多支持100个。当touser为”@all”时忽略本参数
 totag = sys.argv[11]  # 指定接收消息的标签，标签ID列表，多个接收者用‘|’分隔，最多支持100个。当touser为”@all”时忽略本参数
+bark = sys.argv[14] # barkserver url
 
 # （用于测试推送如果改了能收到推送，推送设置就没问题，看看是不是set_push列表里面没设置推送，仔细看下面我写的很详细）要修改的步数，直接输入想要修改的步数值，（默认）留空为随机步数，改了这个直接运行固定值（用于测试推送）
 # 测试好记得留空不然一直提交固定步数
@@ -306,7 +307,7 @@ def push_wx(desp=""):
         print(sckey == "NO")
         return
     else:
-        server_url = f"http://theohomenas.icu:5050/D4M3CtfELdJQicKeMT7PiU/【小米运动步数修改】/{desp}?sound=choo"
+        server_url = f"{bark}【小米运动步数修改】/{desp}?sound=choo"
 
         response = requests.get(server_url).text
         print(response)
