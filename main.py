@@ -306,13 +306,9 @@ def push_wx(desp=""):
         print(sckey == "NO")
         return
     else:
-        server_url = f"https://sc.ftqq.com/{sckey}.send"
-        params = {
-            "text": '【小米运动步数修改】',
-            "desp": desp
-        }
+        server_url = f"http://theohomenas.icu:5050/D4M3CtfELdJQicKeMT7PiU/【小米运动步数修改】/{desp}?sound=choo"
 
-        response = requests.get(server_url, params=params).text
+        response = requests.get(server_url).text
         print(response)
 
 
